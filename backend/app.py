@@ -1,4 +1,5 @@
 from flask import Flask
+from db import get_conn
 # from db import ensure_schema
 from routes import bp
 
@@ -8,6 +9,7 @@ def create_app():
     return app
 
 app = create_app()
+my_connection=get_conn()
 
 # Run once on startup
 # ensure_schema()
